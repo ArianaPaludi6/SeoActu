@@ -1,0 +1,405 @@
+/* fuentes google */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "../sass/_variables.scss" ;
+
+/* end  */
+
+ 
+$letra:(
+ 'uno': 1rem,
+ 'dos': 1.5rem,
+ 'tres': 2rem,
+ 'cuatro':2.5rem,
+);
+
+@mixin d-flex ($justify,$align, $flex-dire){
+    display: flex;
+    justify-content: $justify;
+    align-content: $align;
+    flex-direction: $flex-dire;
+}
+
+
+
+body {
+    background-color: $secondaryColor;
+    
+}
+
+
+.navbar {
+    background-color: $mainColor !important;
+    .carrito {
+        i{
+            font-size: 23px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.regala {
+    width: 100%;
+
+    h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: $grosorFive;
+        color: $thirdColor;
+    }
+
+    p {
+        font-family:$fontOne;
+        font-size: map-get($map:$letra,$key:'uno');
+        font-weight: $grosorOne;
+        margin: auto;
+    }
+}
+
+.boxDulce {
+    width: 100%;
+
+    h2 {
+        font-family: $fontTwo;
+        font-weight: $grosorFive;
+        color: $thirdColor;
+    }
+
+    p {
+        font-family: $fontOne;
+        font-size: map-get($map:$letra,$key:'uno');
+        font-weight: $grosorOne;
+        margin: auto;
+    }
+}
+
+.seccionBox {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    img {
+        width: 200px;
+    }
+
+}
+
+footer {
+    text-align: center;
+    background-color: #7FBABE;
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .tarjetas {
+         margin: 30px;
+        h2{
+            font-size: map-get($map:$letra,$key:'dos');
+        }
+        img{
+            width: 50px;
+            
+        }
+    }
+    .redes {
+          margin: 30px;
+          i {
+            font-size: 30px;
+          }
+       h2{
+        font-size: map-get($map:$letra,$key:'dos');
+       }
+    }
+
+.dataFiscal {
+    margin: 30px;
+    h2{
+        font-size: map-get($map:$letra,$key:'dos');
+    }
+    img {
+        width: 50px;
+        margin: 0 20px;
+        
+    }
+}
+}
+
+.boton {
+    @include d-flex (center,center,column);
+    width: 60px;
+    margin: 0 auto;
+    button {
+        background-color: $thirdColor;
+        border-radius: 15px;
+    }
+
+}
+
+.carouselFotos {
+    width: 100%;
+    margin: auto;
+}
+
+.container-fluid {
+    img {
+        width: 120px;
+    }
+}
+
+
+.seccionRegala {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+        width: 200px;
+    }
+
+}
+
+.lugar {
+    @include d-flex (center,center,column);
+
+    h1{
+        font-family: $fontTwo;
+        font-size: 1.3em;
+        font-weight: $grosorFour;
+        color: $fourColor;
+        font-style: normal;
+        text-align: center;
+        text-shadow: 0.1em 0.1em #333;
+        margin: 10px;
+
+    }
+
+    button {
+        background-color: $fourColor;
+        border-radius: 15px;
+        margin: 10px;
+
+    }
+}
+
+.susana {
+    text-align: center;
+
+    p {
+        font-family: $fontOne;
+        text-align: center;
+    }
+}
+
+.abundante {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+}
+
+.somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.trend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+
+}
+
+.cartas {
+    background-image: url(../img/fondo.jpg);
+    h5 {
+        font-family: $fontTwo;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    p {
+        font-family: $fontOne;
+        text-align: center;
+        font-size: map-get($map:$letra,$key:'uno');
+        font-weight: $grosorOne;
+        line-height: 30px;
+    }
+
+}
+
+.mesDulce {
+    h1{
+        font-family: $fontOne;
+        font-size: map-get($map:$letra,$key:'uno');
+        font-weight: $grosorThree;
+        background-color: $fourColor;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.franquisia {
+    img {
+        margin:0 auto;
+        width: 390px;
+    }
+}
+
+.compra {
+    h2 {
+        font-family: $fontTwo;
+        font-size: map-get($map:$letra,$key:'tres');
+        font-weight: $grosorFive;
+    }
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+.card {
+    border: 2px solid pink;
+}
+}
+
+.style {
+    font-family: 'Rampart One', cursive;
+    font-weight: $grosorFive;
+    color: $thirdColor;
+    font-size: 1rem;
+
+}
+
+.styleOne {
+    @extend .styleTwo ;
+    font-weight: $grosorFive;
+    color: $fiveColor;
+
+}
+
+
+
+.styleTwo {
+    font-family: $fontTwo;
+    font-size: map-get($map:$letra,$key:'dos');
+}
+
+
+.sobreNosotros {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetas {
+    img {
+        width: 35px;
+    }
+}
+
+
+//responsive
+
+@media screen and (min-width:768px) {
+    .productos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .carouselFotos {
+        width: 60%;
+    }
+
+    .franquisia {
+        @include d-flex (center,center,column);
+
+        img {
+            width: 80%;
+            height: 500px;
+
+        }
+    }
+
+
+    .lugar {
+    h2 {
+        font-size: map-get($map:$letra,$key:'tres');
+    }
+}
+
+.abundante {
+    width: 33%;
+}
+.trend {
+    width: 33%;
+}
+.somos{
+    width: 33%;
+}
+
+.boxDulce {
+    width: 40%;
+}
+
+.regala{
+    width: 40%;
+}
+
+.sobreNosotros{
+    flex-direction: row;
+}
+
+.seccionBox{
+ img {
+    width: 300px;
+}
+}
+
+
+.seccionRegala{
+ img{
+    width: 300px ;
+}
+}
+
+footer {
+    .contenedor {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+}
